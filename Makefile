@@ -1,7 +1,7 @@
 install:
 	poetry install
 
-run:
+brain-games:
 	poetry run brain-games
 
 build:
