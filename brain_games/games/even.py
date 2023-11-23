@@ -1,8 +1,8 @@
-import random
+from brain_games.generate_number import generate_number 
 
 
-def make_random_number(sequence : 'str'):
-    return int(ord(random.choice(sequence)))
+#def make_random_number(sequence : 'str'):
+#    return int(ord(random.choice(sequence)))
 
 
 def is_odd(number : 'int'):
@@ -10,10 +10,10 @@ def is_odd(number : 'int'):
 
 
 def brain_even_game(name: 'str'):
-    sequence = 'brain_even'
+   # sequence = 'brain_even'
     counter = 0
     while (counter < 3) :
-        random_number = make_random_number(sequence)
+        random_number = generate_number()
         expected_answer = is_odd(random_number)
         print("Answer \"yes\" if number is even, otherwise answer \"no\" ")
         print(f"Question: {random_number}")
