@@ -9,9 +9,6 @@ def main():
     run_game(brain_even_game)
 
 
-main()
-
-
 if __name__ == "__main__":
     main()
 
