@@ -5,7 +5,7 @@ from brain_games.generate_number import generate_number
 #    return int(ord(random.choice(sequence)))
 
 
-def is_odd(number : 'int'):
+def is_odd(number: 'int'):
     return 'no' if number % 2 else 'yes'
 
 
