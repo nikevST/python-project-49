@@ -4,8 +4,7 @@ from brain_games.generate_progression import generate_arithmetic_progression
 
 def progression_game(name):
     '''
-    Function recieve another function which generetes progression
-    Current function "hiding" one random choisen progression element
+    Function "hiding" one random choisen progression element
     Player trying to guess it
     '''
     GAME_ROUNDS = 3

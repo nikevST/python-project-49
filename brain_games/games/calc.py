@@ -12,7 +12,8 @@ def choose_operator():
 
 def choose_difficult():
     """
-    User enter game difficult rate 
+    User enter game difficult rate
+    To use function, insert it into "difficult_rate" result
     """
     num = input('Choose difficult from 1 to 10, or press Enter: ')
     if num.isdigit():
@@ -27,8 +28,10 @@ def choose_difficult():
 
 
 def brain_calc(name):
-    difficult_rate = choose_difficult()
-    for _ in range(0,3):
+    GAME_ROUNDS = 3
+    GAME_DIFFICULT = 10
+    difficult_rate = GAME_DIFFICULT
+    for _ in range(GAME_ROUNDS):
         num1 = generate_number(difficult_rate)
         num2 = generate_number(difficult_rate)
         operator = choose_operator()

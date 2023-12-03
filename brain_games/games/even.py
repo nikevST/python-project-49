@@ -11,8 +11,9 @@ def is_odd(number: 'int'):
 
 def brain_even_game(name: 'str'):
    # sequence = 'brain_even'
+    GAME_ROUNDS = 3
     counter = 0
-    while (counter < 3) :
+    while (counter < GAME_ROUNDS) :
         random_number = generate_number()
         expected_answer = is_odd(random_number)
         print("Answer \"yes\" if number is even, otherwise answer \"no\" ")
