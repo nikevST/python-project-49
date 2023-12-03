@@ -3,7 +3,7 @@ from brain_games.find_gcd import find_gcd
 
 
 def gcd_game(name):
-    print("Find the greatest common divisor for given numbers.")
+    print("Find the greatest common divisor of given numbers.")
     GAME_ROUNDS = 3
     GAME_DIFFICULT = 10
     for _ in range(GAME_ROUNDS):
@@ -14,13 +14,13 @@ def gcd_game(name):
             num2 = generate_number(GAME_DIFFICULT)
         gcd_of_numbers = find_gcd(num1, num2)
         print(f"Question: {num1} {num2}")
-        answer = input('Your answer is: ')
+        answer = input('Your answer: ')
         if str(gcd_of_numbers) == answer:
             print('Correct!')
         else:
-            print(f'{answer} is a wrong answer.'
-            f'The correct answer is {gcd_of_numbers}')
-            print(f'Try again, {name}')
+            print(f'\'{answer}\' is wrong answer ;(. '
+            f'Correct answer was \'{gcd_of_numbers}\'.')
+            print(f'Let\'s try again, {name}!')
             return
-    print(f'Congratulations, {name}')
+    print(f'Congratulations, {name}!')
 

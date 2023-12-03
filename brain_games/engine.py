@@ -6,8 +6,8 @@ make player name request
 '''
 
 def run_game(game: "function"):
-    print('Welcome to Brain Games!')
-    name = prompt.string('Enter your name, please: ')
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     game(name)
 
