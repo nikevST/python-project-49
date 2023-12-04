@@ -16,7 +16,7 @@ def gcd_game(name):
     for _ in range(GAME_ROUNDS):
         num1 = generate_number(GAME_DIFFICULT)
         num2 = generate_number(GAME_DIFFICULT)
-        while not num1 and not num2:
+        while not num1 or not num2:
             num1 = generate_number(GAME_DIFFICULT)
             num2 = generate_number(GAME_DIFFICULT)
         gcd_of_numbers = find_gcd(num1, num2)
