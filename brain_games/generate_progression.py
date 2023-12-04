@@ -17,4 +17,3 @@ def generate_arithmetic_progression():
         progression_list.append(current_elem)
         current_elem += progression_step
     return progression_list
-

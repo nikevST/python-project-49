@@ -1,8 +1,10 @@
-from brain_games.generate_number import generate_number 
+'''
+    function print number and asked is it even or not
+    player should answer 'yes' or 'no'
+'''
 
-
-#def make_random_number(sequence : 'str'):
-#    return int(ord(random.choice(sequence)))
+from brain_games.generate_number import generate_number
+from brain_games.question_answer import q_a_func
 
 
 def is_odd(number: 'int'):
@@ -10,21 +12,15 @@ def is_odd(number: 'int'):
 
 
 def brain_even_game(name: 'str'):
-   # sequence = 'brain_even'
     GAME_ROUNDS = 3
-    counter = 0
-    while (counter < GAME_ROUNDS) :
-        random_number = generate_number()
+    GAME_DIFFICULT = 10
+    MIN_NUMBER = 1
+    print("Answer \"yes\" if the number is even, otherwise answer \"no\".")
+    for _ in range(GAME_ROUNDS):
+        random_number = generate_number(GAME_DIFFICULT) + MIN_NUMBER
         expected_answer = is_odd(random_number)
-        print("Answer \"yes\" if number is even, otherwise answer \"no\" ")
-        print(f"Question: {random_number}")
-        answer = input("Your answer: ")
-        if expected_answer == answer:
-            print('Correct!')
-            counter += 1
-        else:
-            print(f"\"{answer}\" is a wrong answer ;(. Correct answer is \"{expected_answer}\".")
-            print("Let's try again")
-            return 
-    print(f"Congratulation, {name}!")
-
+        result = q_a_func(str(random_number), str(expected_answer))
+        if not result:
+            print(f"Let\'s try again, {name}!")
+            return
+    print(f"Congratulations, {name}!")
