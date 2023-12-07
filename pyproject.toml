@@ -6,6 +6,7 @@ authors = ["nikevST"]
 license = "open"
 readme = "README.md"
 packages = [{include = "brain_games"}, ]
+repository = https://github.com/nikevST/python-project-49
 
 
 [tool.poetry.dependencies]
