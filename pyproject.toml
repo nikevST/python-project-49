@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "mind_games"
+description = "package includes 5 math games"
 authors = ["nikevST"]
 license = "open"
 readme = "README.md"

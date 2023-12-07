@@ -1,5 +1,5 @@
 '''
-    Function "hiding" one random choisen progression element
+    Function hide random progression element
     Player trying to guess it
 '''
 
@@ -18,10 +18,10 @@ def progression_game(name):
         sequence_string = ""
         for elem in arithmetic_progression_list:
             if elem == hiding_progression_elem:
-                sequence_string += " .. "
+                sequence_string += ".."
             else:
-                sequence_string += f" {str(elem)} "
-        result = q_a_func(sequence_string, str(hiding_progression_elem))
+                sequence_string += f"{str(elem)}"
+        result = q_a_func(' '.join(sequence_string), str(hiding_progression_elem))
         if not result:
             print(f"Let\'s try again, {name}!")
             return
