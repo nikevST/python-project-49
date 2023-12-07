@@ -1,6 +1,3 @@
-from math import sqrt
-
-
 def find_gcd(num1, num2):
     if num1 == num2:
         return num1
@@ -10,7 +7,7 @@ def find_gcd(num1, num2):
         return num1
     less_num = num2 if num1 > num2 else num1
     nod = 1
-    for iter in range(2, int(sqrt(less_num)) + 1):
+    for iter in range(2, int(less_num / 2) + 1):
         if not num1 % iter and not num2 % iter:
             nod = iter
     return nod
