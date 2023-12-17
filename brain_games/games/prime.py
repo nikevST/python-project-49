@@ -3,9 +3,14 @@ function generate number and ask player "is it prime"
 MIN_SIMPLE_NUMBER multiplies by generating number
 '''
 
-from brain_games.generate_number import generate_number
-from brain_games.is_prime import is_number_prime
+from brain_games.utils.generate_number import generate_number
 from brain_games.question_answer import q_a_func
+from math import sqrt
+
+
+def is_number_prime(number):
+    return all(number % divider for divider in range(2, int(sqrt(number) + 1)))
+
 
 
 def prime_game(name: 'str'):

@@ -3,7 +3,7 @@
     player should answer 'yes' or 'no'
 '''
 
-from brain_games.generate_number import generate_number
+from brain_games.utils.generate_number import generate_number
 from brain_games.question_answer import q_a_func
 
 

@@ -1,6 +1,6 @@
 import random
-from brain_games.generate_number import generate_number
-from brain_games.question_answer import q_a_func
+from brain_games.utils.generate_number import generate_number
+#from brain_games.question_answer import q_a_func
 
 
 def choose_operator():
@@ -29,21 +29,22 @@ def choose_difficult():
 
 
 def brain_calc(name):
-    GAME_ROUNDS = 3
+    '''What is the result of the expression?'''
+   # GAME_ROUNDS = 3
     GAME_DIFFICULT = 10
-    print('What is the result of the expression?')
-    for _ in range(GAME_ROUNDS):
-        num1 = generate_number(GAME_DIFFICULT)
-        num2 = generate_number(GAME_DIFFICULT)
-        operator = choose_operator()
-        result_dict = {
-            '+': num1 + num2,
-            '-': num1 - num2,
-            '*': num1 * num2,
-        }
-        question = str(num1) + " " + operator + " " + str(num2)
-        result = q_a_func(question, str(result_dict[operator]))
-        if not result:
-            print(f"Let\'s try again, {name}!")
-            return
-    print(f"Congratulations, {name}!")
+   # print('What is the result of the expression?')
+   # for _ in range(GAME_ROUNDS):
+    num1 = generate_number(GAME_DIFFICULT)
+    num2 = generate_number(GAME_DIFFICULT)
+    operator = choose_operator()
+    result_dict = {
+        '+': num1 + num2,
+        '-': num1 - num2,
+        '*': num1 * num2,
+    }
+    question = str(num1) + " " + operator + " " + str(num2)
+    return (question, str(result_dict[operator]))
+      #  if not result:
+     #       print(f"Let\'s try again, {name}!")
+    #        return
+   # print(f"Congratulations, {name}!")
