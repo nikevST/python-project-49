@@ -4,7 +4,9 @@ Find the greatest common divisor of given numbers.
 
 
 from brain_games.utils.generate_number import generate_number
-#from brain_games.question_answer import q_a_func
+
+
+DISCRIPTION = "Find the greatest common divisor of given numbers."
 
 
 def find_gcd(num1, num2):
@@ -22,12 +24,8 @@ def find_gcd(num1, num2):
     return nod
 
 
-def gcd_game(name):
-    '''Find the greatest common divisor of given numbers.'''
-   # print("Find the greatest common divisor of given numbers.")
-   # GAME_ROUNDS = 3
+def generate_game():
     GAME_DIFFICULT = 10
-   # for _ in range(GAME_ROUNDS):
     num1 = generate_number(GAME_DIFFICULT)
     num2 = generate_number(GAME_DIFFICULT)
     while not num1 or not num2:
@@ -36,7 +34,3 @@ def gcd_game(name):
     gcd_of_numbers = find_gcd(num1, num2)
     question = str(num1) + " " + str(num2)
     return (question, str(gcd_of_numbers))
-    #    if not result:
-     #       print(f"Let\'s try again, {name}!")
-      #      return
-# print(f"Congratulations, {name}!")
