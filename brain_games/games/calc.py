@@ -13,23 +13,6 @@ def choose_operator():
     return random.choice(operators)
 
 
-def choose_difficult():
-    """
-    User enter game difficult rate
-    To use function, insert it into "difficult_rate" result
-    """
-    num = input('Choose difficult from 1 to 10, or press Enter: ')
-    if num.isdigit():
-        if int(num) > 0 and int(num) < 11:
-            if int(num) > 3:
-                print('Nice choice! Please, dont use calc!')
-            return int(num)
-        else:
-            return 1
-    else:
-        return 1
-
-
 def generate_game():
     GAME_DIFFICULT = 10
     num1 = generate_number(GAME_DIFFICULT)
